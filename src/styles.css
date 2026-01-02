@@ -1,3 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
+/* Tailwindcss */
 @import "tailwindcss";
+@import "tailwindcss-primeui";
+/* PrimeIcons */
+@import "primeicons/primeicons.css";
+
+
+.p-menubar {
+  background: transparent !important;
+  border: none;
+}
+
+/* Light mode */
+:root {
+  --p-menubar-item-icon-color: var(--p-text-color);
+}
+
+/* Dark mode */
+.p-dark {
+  --p-menubar-item-icon-color: var(--p-text-color);
+}
+
+.p-menubar .pi {
+  color: inherit;
+}
