@@ -55,7 +55,7 @@ export class Header implements OnInit {
   toggleTheme() {
     const isDarkNow = document.documentElement.classList.toggle('p-dark');
     this.isDark.set(isDarkNow);
-    console.log('click', isDarkNow)
+    // console.log('click', isDarkNow)
   }
 
   showDialog() {

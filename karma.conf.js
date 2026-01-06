@@ -2,22 +2,15 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
+
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-coverage'),
       require('karma-jasmine-html-reporter'),
+      require('karma-coverage'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    reporters: ['progress', 'kjhtml', 'coverage'],
-    coverageReporter: {
-      dir: require('path').join(__dirname, './coverage'),
-      subdir: '.',
-      reporters: [
-        { type: 'html' },
-        { type: 'text-summary' }
-      ]
-    },
+
     client: {
       jasmine: {
         random: false
@@ -30,6 +23,17 @@ module.exports = function (config) {
     proxies: {
       '/assets/': '/base/src/assets/'
     },
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage'),
+      reporters: [
+        { type: 'html' },
+        { type: 'text-summary' }
+      ]
+    },
+    reporters: ['progress', 'kjhtml'],
+    browsers: ['Chrome'],
+    restartOnFileChange: true,
+    // CI launcher (kept for GitHub Actions)
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
@@ -40,9 +44,6 @@ module.exports = function (config) {
           '--disable-setuid-sandbox'
         ]
       }
-    },
-    browsers: ['ChromeHeadlessCI'],
-    singleRun: true,
-    restartOnFileChange: false,
+    }
   });
 };

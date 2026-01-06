@@ -53,7 +53,7 @@ export class ContactUs {
     this.submitted.set(true);
     if (this.contactForm.invalid) return;
     this.isLoading.set(true);
-    console.log('Form Value:', this.contactForm.getRawValue());
+    // console.log('Form Value:', this.contactForm.getRawValue());
     setTimeout(() => {
       this.isLoading.set(false);
       this.contactForm.reset({
