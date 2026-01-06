@@ -6,6 +6,7 @@ import { provideClientHydration, withEventReplay } from '@angular/platform-brows
 
 import { providePrimeNG } from 'primeng/config';
 import { QuizAppPreset } from '../theme/quizapp.preset';
+import { MessageService } from 'primeng/api';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -29,6 +30,8 @@ export const appConfig: ApplicationConfig = {
         menu: 1000,
         tooltip: 1100
       }
-    })
+    }),
+    // Primeng/API
+    MessageService,
   ]
 };

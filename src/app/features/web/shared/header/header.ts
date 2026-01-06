@@ -22,7 +22,7 @@ export class Header implements OnInit {
     this.items = [
       {
         label: 'Home',
-        icon: 'pi pi-home',
+        // icon: 'pi pi-home',
         routerLink: '/'
       },
       {
