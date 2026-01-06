@@ -24,13 +24,18 @@ module.exports = function (config) {
       },
       clearContext: false
     },
+    files: [
+      { pattern: 'src/assets/**/*', watched: false, included: false, served: true }
+    ],
+    proxies: {
+      '/assets/': '/base/src/assets/'
+    },
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },
-    // browsers: ['Chrome'],
     browsers: ['ChromeHeadless'],
     singleRun: true,
     restartOnFileChange: false,
