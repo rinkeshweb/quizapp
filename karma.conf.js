@@ -5,26 +5,34 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
+      require('karma-coverage'),
       require('karma-jasmine-html-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage'),
+      subdir: '.',
+      reporters: [
+        { type: 'html' },
+        { type: 'text-summary' }
+      ]
+    },
     client: {
       jasmine: {
         random: false
       },
       clearContext: false
     },
-    // browsers: ['Chrome'],
-    browsers: ['ChromeHeadless'],
-    singleRun: false,
-    restartOnFileChange: true,
     customLaunchers: {
       ChromeHeadlessCI: {
         base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     },
-    singleRun: true
+    // browsers: ['Chrome'],
+    browsers: ['ChromeHeadless'],
+    singleRun: true,
+    restartOnFileChange: false,
   });
 };
