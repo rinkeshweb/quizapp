@@ -8,7 +8,7 @@ import { RouterLink } from "@angular/router";
   selector: 'app-footer',
   imports: [ButtonModule, DialogModule, CardModule, RouterLink],
   templateUrl: './footer.html',
-  styleUrl: './footer.css',
+  styleUrl: './footer.css'
 })
 export class Footer {
   visible: boolean = false;
@@ -20,6 +20,4 @@ export class Footer {
   closeDialog() {
     this.visible = false
   }
-
-
 }

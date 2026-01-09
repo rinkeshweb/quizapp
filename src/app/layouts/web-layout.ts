@@ -10,10 +10,10 @@ import { BreadcrumbService } from "../core/services/breadcrumb-service";
   template: `
     <app-header />
     <!-- breadcrumb -->
-    @if (breadcrumb.items.length > 0) {
-      <div class="bg-surface-100">
+    @if (breadcrumbs().length > 0) {
+      <div class="bg-surface-100 px-6 sm:px-12">
         <div class="max-w-7xl mx-auto">
-          <p-breadcrumb [model]="breadcrumb.items" styleClass="bg-surface-100" />
+          <p-breadcrumb [home]="home()" [model]="breadcrumbs()" styleClass="bg-surface-100 px-0" />
         </div>
       </div>
     }
@@ -25,11 +25,8 @@ import { BreadcrumbService } from "../core/services/breadcrumb-service";
 })
 
 export class WebLayout {
-  breadcrumb = inject(BreadcrumbService);
+  private breadcrumbService = inject(BreadcrumbService);
 
-  constructor() {
-    // effect(() => {
-    //   console.log('breadcrumb', this.breadcrumb.items)
-    // })
-  }
+  breadcrumbs = this.breadcrumbService.items;
+  home = this.breadcrumbService.home;
 }

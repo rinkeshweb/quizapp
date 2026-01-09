@@ -6,9 +6,8 @@
         <p class="text-md my-8">QuizApp is the easiest way to create, share, and take quizzes online
           - perfect for students, educators, and organizations.</p>
         <div class="flex flex-wrap gap-5 mb-6 lg:mb-0">
-          <p-button label="Get Started for Free" [raised]="true"
-            styleClass="border-0 bg-linear-to-l from-primary-500 to-primary-700 hover:bg-linear-to-r hover:from-primary-700 hover:to-primary-500 transition" />
-          <a routerLink="/" pButton severity="secondary" [raised]="true">
+          <p-button label="Get Started for Free" styleClass="border-0 bg-linear-to-l from-primary-500 to-primary-700" />
+          <a routerLink="/" pButton severity="secondary">
             <span pButtonLabel>Explore Quizzes</span>
           </a>
         </div>
@@ -16,6 +15,70 @@
       <div class="flex justify-end">
         <img src="assets/img/main-banner.png" alt="main-banner" class="max-w-lg w-full">
       </div>
+    </div>
+  </div>
+</section>
+
+<app-trusted-by />
+
+<app-popular-quizzes />
+
+<app-quiz-categories />
+
+<!-- WHY QUIZAPP (FEATURES) -->
+<section class="py-16 px-4 sm:px-12">
+  <div class="max-w-7xl mx-auto">
+
+    <h2 class="text-3xl font-bold text-center mb-14"> Why Choose <span class="text-primary">QuizApp?</span></h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="text-center" pAnimateOnScroll enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500">
+        <i class="pi pi-pencil text-5xl text-primary"></i>
+        <h4 class="mt-5 font-semibold">Easy Quiz Creation</h4>
+        <p class="text-sm opacity-70 mt-2"> Create quizzes in minutes with MCQs, timers & auto evaluation. </p>
+      </div>
+
+      <div class="text-center" pAnimateOnScroll enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500">
+        <i class="pi pi-chart-line text-5xl text-primary"></i>
+        <h4 class="mt-5 font-semibold">Instant Results</h4>
+        <p class="text-sm opacity-70 mt-2"> Get real-time scores, reports & performance insights. </p>
+      </div>
+
+      <div class="text-center" pAnimateOnScroll enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500">
+        <i class="pi pi-shield text-5xl text-primary"></i>
+        <h4 class="mt-5 font-semibold">Secure Platform</h4>
+        <p class="text-sm opacity-70 mt-2"> Timed quizzes, random questions & anti-cheat support. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-16 bg-primary text-white px-4 sm:px-12">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8" pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500">
+    <div>
+      <h2 class="text-3xl font-bold">Start Creating Quizzes Today</h2>
+      <p class="mt-3 opacity-90">
+        Join thousands of learners & educators using QuizApp.
+      </p>
+    </div>
+    <p-button label="Create Free Account" styleClass="bg-white shadow text-primary border-0" />
+  </div>
+</section>
+
+<app-upcoming-quiz />
+
+<app-latest-blog />
+
+<section class="bg-surface-50 dark:bg-surface-800 px-4 sm:px-12">
+  <div class="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10" pAnimateOnScroll
+    enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500">
+    <img src="assets/img/become-creators.png" class="max-w-full sm:max-w-sm pt-5">
+    <div class="pt-10 md:p-0">
+      <h2 class="text-3xl font-bold"> Become One of <span class="text-primary">1000+</span> Quiz Creators </h2>
+      <p class="mt-4 opacity-80"> Share your knowledge, create quizzes, and help learners grow. </p>
+      <p-button label="Start Creating Quizzes" styleClass="mt-6 border-0 bg-linear-to-l from-primary-500 to-primary-700" />
     </div>
   </div>
 </section>

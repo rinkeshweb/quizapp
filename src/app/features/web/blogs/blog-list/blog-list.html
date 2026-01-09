@@ -1,0 +1,51 @@
+<section
+  class="relative bg-primary text-white py-20 bg-[url('assets/img/bg-line-about.png')] bg-no-repeat bg-center bg-cover">
+  <div class="absolute inset-0 bg-primary opacity-90 z-0"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 sm:px-12 text-center z-10">
+    <h1 class="text-4xl mb-4 font-bold">Blog</h1>
+    <p class="text-lg opacity-90">
+      Insights, tutorials, and updates from QuizApp
+    </p>
+  </div>
+</section>
+
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Blog Cards -->
+    <div class="space-y-10">
+      @for(item of blogItem(); track item.id){
+      <article class="grid md:grid-cols-3 gap-6 bg-surface-50 dark:bg-surface-900 rounded-xl shadow-md p-6">
+        <!-- Image -->
+        <div class="md:col-span-1">
+          <img src="assets/img/logo.png" alt="Blog image" class="rounded-lg w-full h-full object-cover" />
+        </div>
+        <!-- Content -->
+        <div class="md:col-span-2 flex flex-col">
+          <p class="text-sm text-primary font-medium mb-2"> Development • Jan 12, 2026 | Views: {{item.views}} </p>
+          <h2 class="text-2xl font-bold mb-3 hover:text-primary cursor-pointer"> {{item.title}} </h2>
+          <p class="text-gray-600 dark:text-gray-300 mb-4"> {{item.body}} </p>
+          <a [routerLink]="['/blog', item.id]"
+            class="text-primary font-semibold mt-auto inline-flex items-center gap-2"> Read More
+            <i class="pi pi-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </article>
+      }
+    </div>
+
+    <!-- Pagination -->
+    <div class="mt-16 flex justify-center">
+      <p-paginator [rows]="5" [totalRecords]="50" [rowsPerPageOptions]="[5,10,20]"></p-paginator>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-16 bg-surface-100">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h3 class="text-2xl font-bold mb-3"> Want to learn more with QuizApp? </h3>
+    <p class="mb-6"> Explore quizzes, blogs, and tutorials designed for developers. </p>
+    <button pButton label="Explore Quizzes"></button>
+  </div>
+</section>

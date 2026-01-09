@@ -1,107 +1,79 @@
 <footer class="bg-surface-0 dark:bg-surface-900 px-6 sm:px-12 pt-12 pb-6">
   <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- Brand -->
     <div>
-      <a routerLink="/" class="inline-block">
-        <img src="assets/img/m-logo.png" alt="logo" class="w-12">
+      <a routerLink="/" class="inline-block transition-transform hover:scale-105">
+        <img src="assets/img/m-logo.png" alt="QuizApp logo" class="w-12">
       </a>
-      <p class="leading-relaxed text-sm mt-6">QuizApp makes learning interactive with fast, secure, and engaging quizzes.</p>
+      <p class="leading-relaxed text-sm mt-6">
+        QuizApp makes learning interactive with fast, secure, and engaging quizzes.
+      </p>
+
       <ul class="mt-6 flex space-x-5">
         <li>
-          <a href="javascript:void(0)" class="text-xl">
-            <i class="pi pi-facebook"></i></a>
+          <a hre="#" class="text-xl transition-all hover:text-primary hover:-translate-y-1">
+            <i class="pi pi-facebook"></i>
+          </a>
         </li>
         <li>
-          <a href="javascript:void(0)" class="text-xl">
+          <a hre="#" class="text-xl transition-all hover:text-primary hover:-translate-y-1">
             <i class="pi pi-linkedin"></i>
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)" class="text-xl">
+          <a hre="#" class="text-xl transition-all hover:text-primary hover:-translate-y-1">
             <i class="pi pi-twitter"></i>
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)" class="text-xl">
+          <a hre="#" class="text-xl transition-all hover:text-primary hover:-translate-y-1">
             <i class="pi pi-instagram"></i>
           </a>
         </li>
       </ul>
     </div>
+
+    <!-- Column -->
     <div>
-      <h4 class="font-semibold text-base">Services</h4>
+      <h4 class="font-semibold text-base">QuizApp</h4>
       <ul class="mt-6 space-y-4">
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Web
-            Development</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Pricing</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Support</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Resources</a>
-        </li>
+        <li><a routerLink="/about-us" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">About Us</a></li>
+        <li><a routerLink="/blogs" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Blogs</a></li>
+        <li><a routerLink="/pricing" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Pricing</a></li>
+        <li><a routerLink="/contact-us" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Contact Us</a></li>
       </ul>
     </div>
+
     <div>
-      <h4 class="font-semibold text-base">Platforms</h4>
+      <h4 class="font-semibold text-base">Features</h4>
       <ul class="mt-6 space-y-4">
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Hubspot</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Integration
-            Services</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Marketing
-            Glossar</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">UIPath</a>
-        </li>
+        <li><a routerLink="/quizzes" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Explore Quizzes</a></li>
+        <li><a routerLink="/create-quiz" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Create Quiz</a></li>
+        <li><a routerLink="/categories" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Categories</a></li>
+        <li><a routerLink="/analytics" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Analytics</a></li>
       </ul>
     </div>
+
     <div>
-      <h4 class="font-semibold text-base">Services</h4>
+      <h4 class="font-semibold text-base">Support</h4>
       <ul class="mt-6 space-y-4">
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">FAQ</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Partners</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Sitemap</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Contact</a>
-        </li>
+        <li><a routerLink="/faq" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">FAQ</a></li>
+        <li><a routerLink="/help" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Help Center</a></li>
+        <li><a routerLink="/privacy-policy" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Privacy Policy</a></li>
+        <li><a routerLink="/terms" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Terms</a></li>
       </ul>
     </div>
   </div>
 
   <hr class="mt-10 mb-6 border-surface-300 dark:border-surface-700">
 
-  <div class="max-w-7xl mx-auto">
-    <div class="flex flex-wrap max-md:flex-col gap-4">
-      <ul class="md:flex md:space-x-6 max-md:space-x-2">
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal">Terms of
-            Service</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal"> Privacy
-            Policy</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)" class="text-sm font-normal"> Security</a>
-        </li>
-      </ul>
-      <p class="text-sm md:ml-auto">&copy; QuizApp. All rights reserved.</p>
-    </div>
+  <div class="max-w-7xl mx-auto footer-animate flex flex-wrap max-md:flex-col gap-4">
+    <ul class="md:flex md:space-x-6">
+      <li><a routerLink="/terms" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Terms of Service</a></li>
+      <li><a routerLink="/privacy-policy" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Privacy Policy</a></li>
+      <li><a routerLink="/security" class="text-sm transition-all duration-300 hover:text-primary hover:translate-x-1 inline-block">Security</a></li>
+    </ul>
+    <p class="text-sm md:ml-auto">&copy; QuizApp. All rights reserved.</p>
   </div>
-
 </footer>

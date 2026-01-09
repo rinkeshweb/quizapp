@@ -1,0 +1,27 @@
+<section class="py-16 px-4 sm:px-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="text-3xl font-bold">Popular <span class="text-primary">Quizzes</span></h2>
+      <a routerLink="/quizzes" class="text-primary font-medium">View All <i class="pi-arrow-right"></i></a>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      @for(quiz of [1,2,3,4]; track quiz;){
+      <div class="bg-surface-0 dark:bg-surface-900 rounded-xl shadow hover:shadow-lg transition overflow-hidden"
+        pAnimateOnScroll enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500">
+        <div class="relative">
+          <img src="assets/img/quizzes/quiz-javascript.webp" class="w-full h-44 object-cover">
+          <p-badge value="Programming" badgeSize="small" severity="info" class="font-medium absolute top-2.5 left-2.5 z-10" />
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold mt-2">JavaScript Basics Quiz</h3>
+          <div class="flex justify-between text-sm mt-3 opacity-70">
+            <span>20 Questions</span>
+            <span>15 Min</span>
+          </div>
+          <p-button label="Start Quiz" styleClass="w-full mt-4 border-0 bg-linear-to-l from-primary-500 to-primary-700" />
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

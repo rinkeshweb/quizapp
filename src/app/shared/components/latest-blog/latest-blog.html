@@ -1,0 +1,20 @@
+<section class="py-16 px-4 sm:px-12">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex justify-between items-center mb-10">
+      <h2 class="text-3xl font-bold">Latest Blogs</h2>
+      <a routerLink="/blogs" class="text-primary font-medium">View All</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      @for(item of latestBlogs(); track item.id){
+      <a [routerLink]="['/blog/', item.id]" class="rounded-xl shadow overflow-hidden" pAnimateOnScroll
+        enterClass="animate-enter fade-in-10 zoom-in-20 animate-duration-500" title="Read more...">
+        <img src="assets/img/blog/blog-1.jpg" class="h-50 w-full object-cover">
+        <div class="p-5">
+          <h4 class="font-semibold">{{item.title}}</h4>
+          <p class="text-sm opacity-70 mt-2 line-clamp-2">{{item.body}}</p>
+        </div>
+      </a>
+      }
+    </div>
+  </div>
+</section>

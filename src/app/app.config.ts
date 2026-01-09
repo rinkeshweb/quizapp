@@ -3,6 +3,7 @@ import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 import { providePrimeNG } from 'primeng/config';
 import { QuizAppPreset } from '../theme/quizapp.preset';
@@ -11,7 +12,8 @@ import { MessageService } from 'primeng/api';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes), provideClientHydration(withEventReplay()),
+    provideRouter(routes), provideClientHydration(withEventReplay(),),
+    provideHttpClient(withFetch()),
     providePrimeNG({
       ripple: true,
       theme: {

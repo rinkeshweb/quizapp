@@ -4,7 +4,7 @@ import { PageNotFound } from './features/page-not-found/page-not-found';
 export const routes: Routes = [
   {
     path: '', loadComponent: () => import('./layouts/web-layout').then((m) => m.WebLayout),
-    data: { breadcrumb: 'Home' },
+    // data: { breadcrumb: 'Home' },
     loadChildren: () => import('./features/web/web.routes').then((m) => m.WEB_ROUTES)
   },
   {
