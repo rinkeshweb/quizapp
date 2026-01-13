@@ -8,7 +8,6 @@ import { find, map, Observable } from 'rxjs';
 })
 export class BlogService {
   private BASE_URL = signal<string>('https://dummyjson.com/posts')
-
   private http = inject(HttpClient);
 
   getBlogs(): Observable<Blog[]> {
