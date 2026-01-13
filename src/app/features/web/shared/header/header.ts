@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { MenuItem } from 'primeng/api';
 import { BadgeModule } from 'primeng/badge';
@@ -6,7 +6,6 @@ import { AvatarModule } from 'primeng/avatar';
 import { MenubarModule } from 'primeng/menubar'
 import { ButtonModule } from 'primeng/button';
 import { Dialog } from 'primeng/dialog';
-import { CounterState } from '@core/services/counterState';
 
 @Component({
   selector: 'app-header',
